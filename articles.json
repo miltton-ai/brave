@@ -47,14 +47,14 @@
       "id": "market",
       "type": "article",
       "title": "Kevät 2025 – Brave1 Market",
-      "content": "Brave1 Market avattiin huhtikuussa 2025 digitaalisesti hallinnoituna markkinapaikkana puolustusinnovaatioille. Yksiköt voivat tilata drooneja, elektronisen sodankäynnin järjestelmiä, komponentteja ja ohjelmistoja suoraan hyväksytyiltä valmistajilta.\n\nMarkkinapaikalla käytettävät e-pisteet (єБали) toimivat sisäisenä kannustimena: yksiköt ansaitsevat pisteitä vahvistetuista vihollisen kalustotuhoista ja vaihtavat pisteitä laitteisiin. Sopimukset ja toimitukset hoidetaan digitaalisesti, ja logistiikka kulkee DOT-Chain Defence -järjestelmän kautta, joka vahvistaa toimitusketjun ja lyhentää hankintasykliä viikoista päiviin.",
+      "content": "Brave1 Market avattiin huhtikuussa 2025 digitaalisesti hallinnoituna markkinapaikkana puolustusinnovaatioille. Yksiköt (esim. pataljoonat ja prikaatit) voivat tilata drooneja, elektronisen sodankäynnin järjestelmiä, komponentteja ja ohjelmistoja suoraan hyväksytyiltä valmistajilta.\n\nMarkkinapaikalla käytettävät e-pisteet (єБали) toimivat sisäisenä kannustimena: yksiköt ansaitsevat pisteitä vahvistetuista vihollisen kalustotuhoista ja vaihtavat pisteitä laitteisiin. Avoimessa kauppapaikassa kalusto ja tarvikkeet ovat esillä ilman tarkkoja yksityiskohtia:",
       "style": "default"
     },
     {
       "id": "model",
       "type": "article",
       "title": "Toimintamalli: julkinen ja suljettu järjestelmä",
-      "content": "DELTA toimii Ukrainan taistelunjohtamis- ja tilannekuvajärjestelmänä sekä Brave1 Marketin kirjautumis- ja valtuutusalustana. Julkinen puoli esittelee hyväksyttyjä innovaatioita ilman arkaluontoisia tietoja, kun taas ei-julkinen puoli sisältää hinnat, e-pisteet, tekniset tiedot ja sopimustoiminnot kirjautuneille yksiköille.\n\nValmistajat käyvät viranomais-auditoinnin ennen tuotteiden listaamista markkinapaikalle. Toimitukset hoitaa Defence Procurement Agency DOT-Chainin kautta.",
+      "content": "DELTA toimii Ukrainan taistelunjohtamis- ja tilannekuvajärjestelmänä sekä Brave1 Marketin kirjautumis- ja valtuutusalustana. Julkinen puoli esittelee hyväksyttyjä innovaatioita ilman arkaluontoisia tietoja, kun taas ei-julkinen puoli sisältää e-pisteet, tekniset tiedot ja sopimustoiminnot kirjautuneille yksiköille.\n\nValmistajat käyvät viranomais-auditoinnin ennen tuotteiden listaamista markkinapaikalle. Toimitukset hoitaa Defence Procurement Agency DOT-Chain-järjestelmän kautta. Se huolehtii toimitusketjusta ja lyhentää hankintasykliä viikoista päiviin.",
       "style": "default"
     },
     {
