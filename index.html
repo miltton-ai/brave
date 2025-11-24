@@ -99,14 +99,20 @@
         }
 
         .module-image {
-            padding: 0;
-            background-color: #f5f5f5;
-            min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    padding: 0;
+    background-color: #000000; /* Musta tausta */
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        }
+.module-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* contain näyttää koko kuvan */
+}
 
         .module-video {
             padding: 0;
