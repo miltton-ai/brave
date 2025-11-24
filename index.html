@@ -1,196 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miltton Mobile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oppeja puolustusteollisuudesta – Brave1 | Miltton</title>
+  <meta name="description" content="Mobiiliesitys: oppeja Ukrainasta ja Brave1-ohjelmasta. Videoita, tiivistetyt tekstikappaleet sekä palautelomake." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-neon: #E4F030;
+      --color-black: #000000;
+      --color-white: #ffffff;
+      --color-orange: #EB5D29;
+      --color-lilac: #8383D2;
+      --color-green: #209E00;
+      --text-color: var(--color-black);
+      --bg: var(--color-white);
+      --maxw: 720px;
+      --radius: 12px;
+      --gap: 16px;
+    }
+    html, body { height: 100%; background: var(--bg); }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: var(--text-color); margin: 0; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 20px; }
+    header { position: sticky; top: 0; backdrop-filter: saturate(180%) blur(8px); background: color-mix(in oklab, var(--color-white) 85%, transparent); border-bottom: 1px solid #eee; z-index: 10; }
+    .brandbar { display: flex; align-items: center; justify-content: space-between; gap: var(--gap); padding: 12px 20px; }
+    .brandmark { width: 18px; height: 18px; background: var(--color-neon); border-radius: 3px; box-shadow: 0 0 0 1px #cbd5, 0 6px 20px rgba(228,240,48,.35); }
+    .brandtitle { font-weight: 700; letter-spacing: .2px; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            line-height: 1.6;
-        }
+    h1 { font-size: clamp(24px, 6vw, 30px); line-height: 1.2; margin: 24px 0 8px; }
+    h2 { font-size: clamp(20px, 5.4vw, 26px); line-height: 1.25; margin: 24px 0 8px; }
+    p { font-size: 16px; line-height: 1.6; margin: 0 0 12px; }
+    .lead { font-size: 18px; line-height: 1.7; }
 
-        /* Header */
-        header {
-            background-color: #000000;
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    .tag { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--color-black); color: var(--color-white); border-radius: 999px; font-size: 14px; margin-bottom: 16px; }
+    .tag .spot { width: 10px; height: 10px; background: var(--color-neon); border-radius: 2px; }
 
-        .logo {
-            color: #ffffff;
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
+    .section { padding: 24px 20px; border: 1px solid #eee; border-radius: var(--radius); margin: 18px 0; background: #fff; }
+    .section.neon { border-color: color-mix(in oklab, var(--color-neon) 70%, #d3d3d3); box-shadow: 0 6px 24px rgba(228,240,48,.25); }
 
-        /* Main content container */
-        main {
-            max-width: 100%;
-            min-height: calc(100vh - 140px);
-        }
+    .media { margin: 12px 0 0; border-radius: var(--radius); overflow: hidden; background: #f7f7f7; }
+    .media img, .media video { display: block; width: 100%; height: auto; }
 
-        /* Module container */
-        .modules-container {
-            padding: 0;
-        }
+    .note { padding: 12px 14px; border-left: 4px solid var(--color-orange); background: #fff7f3; border-radius: 6px; margin: 12px 0; }
 
-        .module {
-            padding: 30px 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
+    .grid { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
 
-        /* Sample modules styling */
-        .module-article {
-            background-color: #ffffff;
-        }
+    .cta { display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 999px; background: var(--color-black); color: var(--color-white); text-decoration: none; font-weight: 600; }
 
-        .module-article h2 {
-            font-size: 28px;
-            margin-bottom: 16px;
-            color: #000000;
-        }
+    footer { padding: 32px 20px; text-align: center; color: #333; }
 
-        .module-article p {
-            font-size: 16px;
-            color: #333333;
-        }
+    .forms-embed { border: 1px solid #eee; border-radius: var(--radius); overflow: hidden; }
+    .forms-embed iframe { width: 100%; height: 700px; border: 0; }
 
-        .module-image {
-            padding: 0;
-            background-color: #f5f5f5;
-            min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .neon-corner { position: relative; }
+    .neon-corner:before { content: ""; position: absolute; right: -1px; top: -1px; width: 36px; height: 20px; background: var(--color-neon); border-radius: 0 6px; }
 
-        .module-video {
-            padding: 0;
-            background-color: #000000;
-            min-height: 200px;
-        }
+    .loading { text-align: center; padding: 40px; color: #999; }
 
-        .module-prompt {
-            background-color: #E4F030;
-        }
-
-        .module-embed {
-            padding: 0;
-            min-height: 300px;
-        }
-
-        /* Accent colors */
-        .accent-neon {
-            background-color: #E4F030;
-        }
-
-        .accent-orange {
-            background-color: #EB5D29;
-            color: #ffffff;
-        }
-
-        .accent-lilac {
-            background-color: #8383D2;
-            color: #ffffff;
-        }
-
-        .accent-green {
-            background-color: #2D9E00;
-            color: #ffffff;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 14px;
-            opacity: 0.8;
-        }
-
-        /* Demo content */
-        .demo-placeholder {
-            text-align: center;
-            padding: 40px 20px;
-            color: #999999;
-            font-size: 14px;
-        }
-    </style>
+    @media (min-width: 560px) { .grid { grid-template-columns: 1fr 1fr; } }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">miltton</div>
-    </header>
+  <header>
+    <div class="brandbar">
+      <div class="brandmark" aria-hidden="true"></div>
+      <div class="brandtitle">Miltton | Brave1 – mobiiliesitys</div>
+      <a class="cta" href="#forms">Anna palaute <span aria-hidden>→</span></a>
+    </div>
+  </header>
 
-    <main>
-        <div class="modules-container" id="modulesContainer">
-            <!-- Hero module -->
-            <div class="module module-article accent-neon">
-                <h2>Miltton Mobile</h2>
-                <p>Modulaarinen mobiilisivusto Milttonin brändiohjeen mukaisesti.</p>
-            </div>
+  <main class="wrap">
+    <div id="articlesContainer" class="loading">Ladataan sisältöä...</div>
 
-            <!-- Placeholder modules -->
-            <div class="module module-article">
-                <div class="demo-placeholder">
-                    [ Artikkelimoduli ]<br>
-                    Otsikko ja teksti JSON-datasta
-                </div>
-            </div>
+    <!-- Video modules (static for now) -->
+    <section class="section" id="state-video">
+      <div class="media">
+        <video controls playsinline poster="assets/state_poster.jpg">
+          <source src="assets/state_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
 
-            <div class="module module-image">
-                <div class="demo-placeholder">
-                    [ Kuvamoduli ]<br>
-                    Kuvasisältö
-                </div>
-            </div>
+    <section class="section" id="ecosystem-video">
+      <div class="media">
+        <video controls playsinline poster="assets/ecosystem_poster.jpg">
+          <source src="assets/ecosystem_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
 
-            <div class="module module-video">
-                <div class="demo-placeholder" style="color: #ffffff;">
-                    [ Videomoduli ]<br>
-                    Videotoisto
-                </div>
-            </div>
+    <section class="section" id="unitcity-video">
+      <div class="media">
+        <video controls playsinline poster="assets/unitcity_poster.jpg">
+          <source src="assets/unitcity_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
 
-            <div class="module module-prompt accent-orange">
-                <div class="demo-placeholder" style="color: #ffffff;">
-                    [ Prompt-moduli ]<br>
-                    AI-kysymys ja vastaus
-                </div>
-            </div>
+    <section class="section" id="brave1-video">
+      <div class="media">
+        <video controls playsinline poster="assets/brave1_bg_poster.jpg">
+          <source src="assets/brave1_bg_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
 
-            <div class="module module-embed">
-                <div class="demo-placeholder">
-                    [ Embed-moduli ]<br>
-                    iframe-sisältö
-                </div>
-            </div>
-        </div>
-    </main>
+    <section class="section" id="demo-video">
+      <div class="media">
+        <video controls playsinline poster="assets/demo_poster.jpg">
+          <source src="assets/demo_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
 
-    <footer>
-        <div class="logo" style="margin-bottom: 10px;">miltton</div>
-        <p>&copy; 2024 Miltton</p>
-    </footer>
+    <section class="section" id="market-videos">
+      <div class="grid media">
+        <video controls playsinline poster="assets/market_catalog_poster.jpg">
+          <source src="assets/market_catalog_video.mp4" type="video/mp4">
+        </video>
+        <video controls playsinline poster="assets/market_uav_poster.jpg">
+          <source src="assets/market_uav_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
 
-    <script>
-        // Module system will be implemented here
-        console.log('Miltton Mobile ready');
-    </script>
+    <section class="section" id="model-video">
+      <div class="media">
+        <video controls playsinline poster="assets/model_poster.jpg">
+          <source src="assets/model_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <section class="section" id="significance-video">
+      <div class="media">
+        <video controls playsinline poster="assets/significance_poster.jpg">
+          <source src="assets/significance_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <!-- Forms embed -->
+    <section class="section" id="forms-embed">
+      <div class="forms-embed">
+        <iframe title="Palaute" src="https://forms.office.com/Pages/ResponsePage.aspx?placeholder"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© Miltton Group. Visuaalinen ilme: neon + black, typografia painottuen selkeyteen. Päivitetty 24.11.2025.</small>
+  </footer>
+
+  <script>
+    // Load articles from JSON
+    async function loadArticles() {
+      try {
+        const response = await fetch('articles.json');
+        const data = await response.json();
+        const container = document.getElementById('articlesContainer');
+        
+        container.innerHTML = '';
+        
+        data.modules.forEach(module => {
+          if (module.type === 'article') {
+            const section = document.createElement('section');
+            section.className = 'section';
+            section.id = module.id;
+            
+            if (module.style === 'neon') {
+              section.classList.add('neon', 'neon-corner');
+            }
+            
+            let html = '';
+            
+            // Add tag if exists
+            if (module.tag) {
+              html += `<span class="tag"><span class="spot" aria-hidden="true"></span> ${module.tag}</span>`;
+            }
+            
+            // Add title
+            if (module.id === 'hero') {
+              html += `<h1>${module.title}</h1>`;
+            } else {
+              html += `<h2>${module.title}</h2>`;
+            }
+            
+            // Add content
+            const paragraphs = module.content.split('\n\n');
+            paragraphs.forEach((para, index) => {
+              const className = (module.id === 'hero' && index === 0) ? 'lead' : '';
+              html += `<p class="${className}">${para.replace(/\n/g, '<br>')}</p>`;
+            });
+            
+            section.innerHTML = html;
+            container.appendChild(section);
+          }
+        });
+      } catch (error) {
+        console.error('Error loading articles:', error);
+        document.getElementById('articlesContainer').innerHTML = 
+          '<div class="section"><p>Virhe ladattaessa sisältöä.</p></div>';
+      }
+    }
+    
+    // Load articles on page load
+    loadArticles();
+  </script>
 </body>
 </html>
