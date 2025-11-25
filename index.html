@@ -217,9 +217,17 @@
             padding: 20px;
             color: #999999;
         }
-    /* Chatbot module */
+/* Chatbot module */
 .module-prompt {
-    background-color: #E4F030;
+    background-color: #000000; /* Musta tausta */
+}
+
+.module-prompt h2 {
+    color: #ffffff; /* Valkoinen otsikko */
+}
+
+.module-prompt p {
+    color: #ffffff; /* Valkoinen teksti */
 }
 
 .chatbot-container {
@@ -274,36 +282,40 @@
 .chat-input {
     flex: 1;
     padding: 12px 16px;
-    border: 2px solid #000;
+    border: 2px solid #E4F030; /* Neon-kehys */
     border-radius: 8px;
     font-size: 16px;
     font-family: inherit;
+    background: #ffffff; /* Valkoinen tausta */
+    color: #000000;
 }
 
 .chat-input:focus {
     outline: none;
-    border-color: #000;
+    border-color: #E4F030;
+    box-shadow: 0 0 0 2px rgba(228, 240, 48, 0.2);
 }
 
 .chat-button {
     padding: 12px 24px;
-    background: #000;
-    color: #fff;
+    background: #E4F030; /* Neon-nappi */
+    color: #000;
     border: none;
     border-radius: 8px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     font-family: inherit;
 }
 
 .chat-button:hover {
-    background: #333;
+    background: #d4e020;
 }
 
 .chat-button:disabled {
-    background: #ccc;
+    background: #666;
     cursor: not-allowed;
+    color: #999;
 }
 
 .chat-loading {
