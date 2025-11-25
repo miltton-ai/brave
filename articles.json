@@ -20,7 +20,7 @@
       "type": "article",
       "title": "Ukrainan teknologiaekosysteemi kehittyy",
       "content": "Ukraina on sodan aikana noussut digitaalisen puolustusteknologian laboratorioksi. Innovaatioita syntyy nopeasti erityisesti drooni-, tekoäly- ja elektronisen sodankäynnin aloilla.\n\nValtiollinen digitaalisen transformaation ministeriö toimii moottorina, joka yhdistää siviili- ja puolustusteknologian kehityksen. Tässä kontekstissa synnytetty Brave1-ohjelma organisoi ja nopeuttaa innovaation kulun ideasta rintamalle.",
-      "style": "neon"
+      "style": "default"
     },
     {
       "id": "unit-city",
@@ -62,14 +62,14 @@
       "type": "article",
       "title": "Brave1:n merkitys ja vaikutukset",
       "content": "<b>Nopeus:</b> Digitalisoidut prosessit lyhentävät hankintasykliä merkittävästi. \n<b>Kannustemalli:</b> e-pistejärjestelmä palkitsee tehokkaat yksiköt ja luo markkinasignaaleja toimiville innovaatioille. \n<b>Integraatio:</b> Brave1 yhdistää kehittäjät, testauksen, rahoituksen ja kenttäkäytön samaan järjestelmään. \n<b>Hallittu avoimuus:</b> Julkinen osa kannustaa innovaatioita ja sijoittajia, ei-julkinen suojaa operatiivista tietoa.\n<b> Pitemmällä aikavälillä Brave1 tukee Ukrainan tavoitetta olla yksi merkittävimmistä eurooppalaisista puolustusalan toimijoista myös sodan jälkeen.</b> \n\n<b>Eettiset kysymykset:</b> Tappamisen pelillistäminen on herättänyt arvostelua. Presidentti Zelenskyi reagoi tähän ja ilmoitti, että 1.12.2025 alkaen pisteitä jaetaan myös muun muassa evakuoinneista. Ukrainalaisen pelastaminen on painoarvoltaan suurempi teko kuin vihollissotilaan surmaaminen.",
-      "style": "default"
+      "style": "neon"
     },
     {
       "id": "contact",
       "type": "article",
       "title": "Yhteystiedot",
       "content": "Kaius Niemi, Miltton Group\nkaius.niemi@miltton.com · +358 44 765 5706",
-      "style": "default"
+      "style": "neon"
     },
     {
       "id": "forms",
