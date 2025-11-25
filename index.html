@@ -594,8 +594,8 @@ async function sendMessage() {
     try {
         // Prepare message with context
         const contextMessage = chatContext 
-            ? `${chatContext.context}\n\n${chatContext.instructions}\n\nKysymys: ${userMessage}`
-            : userMessage;
+        ? `${chatContext.system}\n\nKonteksti: ${chatContext.context}\n\nKysymys: ${userMessage}\n\nMuista: Älä esitä kysymyksiä lopussa.`
+        : userMessage;
         
         // Call Cloudflare Worker
         const response = await fetch('https://ai.miltton-ai.workers.dev', {
