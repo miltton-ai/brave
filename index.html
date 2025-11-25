@@ -156,10 +156,24 @@
             background-color: #E4F030;
         }
 
-        .module-embed {
-            padding: 0;
-            min-height: 300px;
-        }
+     .embed-wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Kiinteä korkeus lomakkeelle */
+    overflow: hidden;
+}
+
+.embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Mobiilille pienempi */
+@media (max-width: 560px) {
+    .embed-wrapper {
+        height: 500px;
+    }
 
         /* Accent colors */
         .accent-neon {
@@ -304,6 +318,21 @@
             <!-- Article: Yhteystiedot -->
             <div id="article-contact" class="module module-article loading">
                 Ladataan...
+            </div>
+
+            <!-- Embed module: Microsoft Forms -->
+           <div class="module module-embed">
+           <div class="embed-wrapper">
+           <iframe 
+            src="https://forms.office.com/e/5ZCiMnnu5x?embed=true" 
+            frameborder="0" 
+            marginwidth="0" 
+            marginheight="0" 
+            allowfullscreen 
+            webkitallowfullscreen 
+            mozallowfullscreen 
+            msallowfullscreen>
+            </iframe>
             </div>
 
             <!-- Article: Palaute -->
